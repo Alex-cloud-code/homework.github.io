@@ -1,0 +1,538 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.all {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background: #213B7E;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: calc(50% - 1268px / 2);
+    padding-right: calc(50% - 1268px / 2);
+    margin-bottom: 33px;
+    position: relative;
+}
+
+.logotype {
+    width: 50px;;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+    margin-left: 52px;
+}
+
+.menu__link {
+    font-size: 20px;
+    line-height: 23px;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+    padding: 28px 18px;
+    display: block;
+    text-align: center;
+}
+
+.menu__link_active {
+    color: #213B7E;
+    background-color: #FFFFFF;
+    text-decoration: none;
+}
+
+.button {
+    width: 153px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EA5D21;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.content {
+    padding-left: calc(50% - 911px / 2);
+    padding-right: calc(50% - 911px / 2);
+    flex-grow: 1;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000000;
+    margin-bottom: 32px;
+}
+
+.content__img_classroom {
+    margin-bottom: 15px;
+}
+
+.content_info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content__section {
+    width: 633.5px;
+}
+
+.subtitle__article {
+    margin-bottom: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    color: #000000;
+}
+
+.about__text {
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.self {
+    color: #CF5510;
+}
+
+.heading {
+    position: relative;
+    width: 129px;
+    display: flex;
+    margin-top: 47px;
+    margin-right: 23px;
+    font-family: 'Lobster', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    color: #646464;
+}
+
+.quotation-marks {
+    font-size: 64px;
+}
+
+.quotation-marks_left {
+    position: absolute;
+    left: -32px;
+    top: 10px;
+}
+
+.quotation-marks_right {
+    position: absolute;
+    top: 55px;
+    right: -20px;
+}
+
+.footer_section {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #213B7E;
+    color: #FFFFFF50;
+    font-size: 20px;
+    line-height: 23px;
+    margin-top: 33px;
+}
+
+.footer__link {
+    color: #FFFFFF50;
+}
+
+.content__students {
+    padding-left: calc(50% - 1202px / 2);
+    padding-right: calc(50% - 1202px / 2);
+    flex-grow: 1;
+}
+
+.subtitle {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000000;
+}
+
+.students__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.student__all {
+    width: 200px;
+    height: 270px;
+    margin-top: 25px;
+}
+
+.student__name {
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+    text-align: center;
+    width: 200px;
+    margin-top: 8px;
+}
+
+.student__second {
+    position: relative;
+}
+
+.student__new {
+    position: absolute;
+    top: -12px;
+    right: -13px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    background: #3AA828;
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 94px;
+    height: 24px;
+    text-align: center;
+    padding-top: 2px;
+}
+
+.content__about {
+    padding-left: calc(50% - 820px / 2);
+    padding-right: calc(50% - 820px / 2);
+    flex-grow: 1;
+}
+
+.about__video_text {
+    font-size: 25px;
+    line-height: 29px;
+    color: #000000;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.content_contact {
+    padding-left: calc(50% - 1268px / 2);
+    padding-right: calc(50% - 1268px / 2);
+    flex-grow: 1;
+}
+
+.subtitle_map {
+    margin-left: 16%;
+    margin-bottom: 25px;
+}
+
+.contacts__our {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 16%;
+}
+
+.contacts__subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.contacts_text {
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 63px;
+}
+
+.contact__telephone {
+    color: #000000;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    width: 500px;
+    top: 150px;
+    left: calc(50% - 500px/2);
+    flex-direction: column;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid #213B7E;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .25);
+}
+
+.popup_heading {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    margin-top: 26px;
+    margin-bottom: 36px;
+    color: #000000;
+}
+
+.popup_login {
+    margin-left: 28px;
+    margin-right: 28px;
+    height: 55px;
+    margin-bottom: 56px;
+    background: #FFFFFF;
+    border: 1px solid #808080;
+}
+
+.popup__password {
+    margin-left: 28px;
+    margin-right: 28px;
+    height: 55px;
+    margin-bottom: 56px;
+    background: #FFFFFF;
+    border: 1px solid #808080;
+    border-collapse: collapse;
+}
+
+.popup_button {
+    width: 153px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EA6113;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 56px;
+    margin-left:calc(50% - 153px/2);
+}
+
+.popup__password_windows {
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    padding-left: 14px;
+    color: #808080;
+    box-sizing: border-box;
+}
+
+.visible {
+    display: block;
+}
+
+.invisible {
+    position: unset;
+}
+
+.invisible_new {
+    display: none;
+}
+
+@media (max-width: 1300px) {
+
+    .header {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .content_contact {
+        padding: 12px;
+    }
+
+    .content_map {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1230px) {
+
+    .content__students {
+        margin: 12px;
+    }
+}
+
+@media (max-width: 1024px) {
+   
+    .content_video {
+        width: 100%;
+    }
+
+    .content_map {
+        width: 100%;
+    }
+}
+
+@media (max-width: 940px) {
+
+    .content {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .content__about {
+        margin: 12px;
+    }
+
+    .content__section {
+        width: 100%;
+    }
+
+    .content_info {
+        flex-direction: column;
+    }
+
+    .heading {
+        margin-top: 0px;
+        margin-left: 30px;
+    }   
+}
+
+@media (max-width: 780px) {
+
+    .header {
+        padding: 12px 12px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 12px;
+    }
+
+    .logo_site {
+        order: 1;
+        height: 50px;
+        width: 50%;
+    }
+
+    .button {
+        order: 2;
+    }
+
+    .navigate {
+        order: 3;
+        flex-grow: 1;
+    }
+
+    .menu {
+        margin-top: 12px;
+        margin-left: 0;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(100px, 200px));
+        justify-content: space-between;
+    }
+
+    .menu__link {
+        padding: 24px 14px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .content__img_classroom {
+        max-width: 100%;
+    }
+
+    .subtitle_map {
+        margin-left: 0;
+    }
+
+    .content_contact {
+        text-align: center;
+    }
+
+    .contacts__our {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .students__gallery {
+        justify-content: center;
+    }
+
+    .popup {
+        top: 160px;
+    }
+
+    .popup_login {
+        margin-left: 28px;
+        margin-right: 28px;
+    }
+
+    .popup__password {
+        margin-left: 28px;
+        margin-right: 28px;
+    }
+}
+
+@media (max-width: 505px) {
+   
+    .button {
+        width: 50%;
+    }
+
+    .menu {
+        grid-template-columns: repeat(2, minmax(100px, 200px));
+    }
+
+    .content__students {
+        margin: 12px;
+        flex-grow: 1;
+        justify-content: center;
+    }
+
+    .content_video {
+        width: 100%;
+        height: 300px;
+    }
+
+    .title {
+        margin-bottom: 14px;
+    }
+
+    .subtitle {
+        text-align: center;
+    }
+
+    .about__video_text {
+        text-align: center;
+    }
+
+    .popup {
+        width: 100%;
+        top: 226px;
+        left: 0;
+    }
+
+    .popup_login {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    .popup__password {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+}
