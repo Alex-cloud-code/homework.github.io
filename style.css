@@ -1,6 +1,22 @@
+@keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
+}
+
+*::selection {
+    background-color: black;
+    color: white;
 }
 
 .all {
@@ -26,13 +42,24 @@
 }
 
 .logotype {
-    width: 50px;;
+    width: 50px;
 }
 
 .menu {
     display: flex;
     list-style-type: none;
     margin-left: 52px;
+}
+
+
+.menu__link:hover {
+    transition: 0.3s;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .25);
+    border: 1px solid #fff;
+}
+
+.menu__link_active:hover {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .25);
 }
 
 .menu__link {
@@ -49,7 +76,9 @@
     color: #213B7E;
     background-color: #FFFFFF;
     text-decoration: none;
+    border: 1px solid #213B7E;
 }
+
 
 .button {
     width: 153px;
@@ -66,10 +95,31 @@
     text-decoration: none;
 }
 
+.button:hover {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .25);
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+
+.logotype:hover {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .25);
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+
+.student__all:hover {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .25);
+    border: 1px solid #00000055;
+    box-sizing: border-box;
+}
+
+
 .content {
     padding-left: calc(50% - 911px / 2);
     padding-right: calc(50% - 911px / 2);
     flex-grow: 1;
+    position: relative;
+    
 }
 
 .title {
@@ -81,6 +131,10 @@
 }
 
 .content__img_classroom {
+    margin-bottom: 15px;
+}
+
+.content__img_my {
     margin-bottom: 15px;
 }
 
@@ -116,6 +170,7 @@
 .heading {
     position: relative;
     width: 129px;
+    height: 100px;
     display: flex;
     margin-top: 47px;
     margin-right: 23px;
@@ -125,6 +180,11 @@
     font-size: 36px;
     line-height: 45px;
     color: #646464;
+}
+
+.heading:hover {
+    -webkit-animation: rotate-center 0.6s ease-in-out both;
+    animation: rotate-center 0.6s ease-in-out 0.3s both;
 }
 
 .quotation-marks {
@@ -163,6 +223,7 @@
     padding-left: calc(50% - 1202px / 2);
     padding-right: calc(50% - 1202px / 2);
     flex-grow: 1;
+    position: relative;
 }
 
 .subtitle {
@@ -177,6 +238,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
+    box-sizing: border-box;
 }
 
 .student__all {
@@ -185,9 +247,14 @@
     margin-top: 25px;
 }
 
+.student__roll1 {
+    box-sizing: border-box;
+}
+
 .student__name {
     font-size: 20px;
     line-height: 23px;
+    height: 30px;
     color: #000000;
     text-align: center;
     width: 200px;
@@ -196,9 +263,11 @@
 
 .student__second {
     position: relative;
+    box-sizing: border-box  ;
 }
 
-.student__new {
+.student__second::after {
+    content: 'НОВИЧЕК';
     position: absolute;
     top: -12px;
     right: -13px;
@@ -218,6 +287,7 @@
     padding-left: calc(50% - 820px / 2);
     padding-right: calc(50% - 820px / 2);
     flex-grow: 1;
+    position: relative;
 }
 
 .about__video_text {
@@ -232,6 +302,7 @@
     padding-left: calc(50% - 1268px / 2);
     padding-right: calc(50% - 1268px / 2);
     flex-grow: 1;
+    position: relative;
 }
 
 .subtitle_map {
@@ -274,27 +345,78 @@
     width: 500px;
     top: 150px;
     left: calc(50% - 500px/2);
+    padding: 24px 28px 56px 28px;
     flex-direction: column;
     align-items: center;
     background: #FFFFFF;
     border: 1px solid #213B7E;
     box-sizing: border-box;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, .25);
+    z-index: 100;
 }
+
+.close {
+    position: absolute;
+    top: -15px;
+    right: 6px;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    z-index: 1;
+    margin: 20px auto;
+    cursor: pointer;
+}
+.close:before {
+    content: '+';
+    color: #000;
+    opacity: .7;
+    position: absolute;
+    z-index: 2;
+    transform: rotate(45deg);
+    font-size: 50px;
+    line-height: 1;
+    top: -5px;
+    left: 6px;
+    transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
+}
+.close:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background: #EA6113;
+    z-index: 1;
+    transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
+    transform: scale(0.01);
+}
+
+.close:hover:after {
+    transform: scale(1);
+}
+.close:hover:before {
+    transform: scale(0.8) rotate(45deg);
+    color: #fff;
+}
+
+
+
+
+
+
 
 .popup_heading {
     font-weight: 400;
     font-size: 24px;
     line-height: 28px;
     text-align: center;
-    margin-top: 26px;
     margin-bottom: 36px;
     color: #000000;
 }
 
 .popup_login {
-    margin-left: 28px;
-    margin-right: 28px;
     height: 55px;
     margin-bottom: 56px;
     background: #FFFFFF;
@@ -302,8 +424,6 @@
 }
 
 .popup__password {
-    margin-left: 28px;
-    margin-right: 28px;
     height: 55px;
     margin-bottom: 56px;
     background: #FFFFFF;
@@ -324,9 +444,15 @@
     line-height: 21px;
     color: #fff;
     text-decoration: none;
-    margin-bottom: 56px;
     margin-left:calc(50% - 153px/2);
 }
+
+.popup_button:hover {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .25);
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+
 
 .popup__password_windows {
     width: 100%;
@@ -336,6 +462,7 @@
     font-size: 24px;
     line-height: 28px;
     padding-left: 14px;
+    padding-right: 14px;
     color: #808080;
     box-sizing: border-box;
 }
@@ -344,13 +471,150 @@
     display: block;
 }
 
-.invisible {
-    position: unset;
+.navigate_hide_button {
+    z-index: -100;
+    width: 50px;
+    height: 50px;
+    background: #EA6113;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px;
+    box-sizing: border-box;
 }
 
-.invisible_new {
+.navigate_hide {
+    z-index: 100;
+    display: none;
+    position: absolute;
+    left: -100vw;
+    width: 100vw;
+    background-color: #213B7E;
+    top: -24px;
+}
+
+.visible_mobile {
+    left: 0px;
+}
+
+.menu_color {
+    background-color: #213B7E;
+}
+
+.burger {
+    width: 34px;
+    height: 7px;
+    background-color: #213B7EDD
+}
+
+.title::before {
+    content: '👨🏼‍🎓 ' ;
+}
+
+.subtitle::before {
+    content: '👨🏼‍🎓 ' ;
+}
+
+.block {
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+.wellcome {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    margin-bottom: 12px;
+}
+
+.hard_skills {
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+.hard_skill {
+    padding-left: 20px;
+}
+
+.hard_skilling {
+    padding-left: 20px;
+
+}
+
+.letter {
+    color: red;
+    font-size: 200%;
+    font-family: serif;
+    top: 5px;
+}
+
+
+
+.learned {
+    color: green;
+}
+
+.study {
+    color: darkorange;
+}
+
+.unexplored {
+    color: red;
+}
+
+.skills1 {
+    list-style-type: disclosure-open;
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    line-height: 25px;
+}
+
+.skills2 {
+    list-style-type: disclosure-closed;
+}
+
+.student__smith {
+    display: none;
+    width: 200px;
+    height: 270px;
+}
+
+.student__djohn {
+    display: none;
+    width: 200px;
+    height: 270px;
+}
+
+.student__tomm {
+    display: none;
+    width: 200px;
+    height: 270px;
+}
+
+.student__leo {
+    display: none;
+    width: 200px;
+    height: 270px;
+}
+
+.student__robert {
+    display: none;
+    width: 200px;
+    height: 270px;
+}
+
+.visible_student {
+    display: block;
+}
+
+.invisible_student {
     display: none;
 }
+
 
 @media (max-width: 1300px) {
 
@@ -371,7 +635,7 @@
 @media (max-width: 1230px) {
 
     .content__students {
-        margin: 12px;
+        padding: 12px;
     }
 }
 
@@ -393,10 +657,10 @@
     }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 855px) {
 
     .content__about {
-        margin: 12px;
+        padding: 12px;
     }
 
     .content__section {
@@ -411,9 +675,6 @@
         margin-top: 0px;
         margin-left: 30px;
     }   
-}
-
-@media (max-width: 780px) {
 
     .header {
         padding: 12px 12px;
@@ -441,7 +702,7 @@
         margin-top: 12px;
         margin-left: 0;
         display: grid;
-        grid-template-columns: repeat(4, minmax(100px, 200px));
+        grid-template-columns: repeat(5, minmax(100px, 200px));
         justify-content: space-between;
     }
 
@@ -452,6 +713,10 @@
     }
 
     .content__img_classroom {
+        max-width: 100%;
+    }
+
+    .content__img_my {
         max-width: 100%;
     }
 
@@ -487,18 +752,22 @@
     }
 }
 
-@media (max-width: 505px) {
-   
+@media (min-width:100px) and (max-width: 524px) {
+
+    .navigate {
+        display: none;
+    }
+
     .button {
         width: 50%;
     }
 
     .menu {
-        grid-template-columns: repeat(2, minmax(100px, 200px));
+        grid-template-columns: repeat(1, minmax(100px, 100vw));
     }
 
     .content__students {
-        margin: 12px;
+        padding: 12px;
         flex-grow: 1;
         justify-content: center;
     }
@@ -522,7 +791,7 @@
 
     .popup {
         width: 100%;
-        top: 226px;
+        top: 74px;
         left: 0;
     }
 
@@ -535,4 +804,18 @@
         margin-left: 12px;
         margin-right: 12px;
     }
+
+    .navigate_hide_button {
+        z-index: 100;
+    }
+
+    .burger {
+        z-index: 100;
+    }
+    .navigate_hide {
+        display: block;
+    }
 }
+
+
+

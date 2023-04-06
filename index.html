@@ -11,12 +11,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/png">
 </head>
 
 <body class="all">
     <header class="header">
+        <div class="navigate_hide_button">
+            <div class="burger"></div>
+            <div class="burger"></div>
+            <div class="burger"></div>
+        </div>
         <a class="logo_site" href="index.html">
-            <img class="logotype" src="./img/logo.svg" alt="logotype">
+            <img class="logotype" src="./img/logo.svg" alt="логотип">
         </a>
         <nav class="navigate">
             <ul class="menu">
@@ -24,13 +30,23 @@
                 <li class="menu__list"><a class="menu__link" href="students.html">Студенты</a></li>
                 <li class="menu__list"><a class="menu__link" href="about.html">О курсе</a></li>
                 <li class="menu__list"><a class="menu__link" href="contacts.html">Контакты</a></li>
+                <li class="menu__list"><a class="menu__link" href="aboutMy.html">О себе</a></li>
             </ul>
         </nav>
         <a class="button" href="#">Войти</a>
     </header>
     <main class="content">
+        <nav class="navigate_hide">
+            <ul class="menu menu_color">
+                <li class="menu__list"><a class="menu__link menu__link_active" href="index.html">Главная</a></li>
+                <li class="menu__list"><a class="menu__link" href="students.html">Студенты</a></li>
+                <li class="menu__list"><a class="menu__link" href="about.html">О курсе</a></li>
+                <li class="menu__list"><a class="menu__link" href="contacts.html">Контакты</a></li>
+                <li class="menu__list"><a class="menu__link" href="aboutMy.html">О себе</a></li>
+            </ul>
+        </nav>
         <h1 class="title">Добро пожаловать на курс “Создание веб-сайтов (HTML, CSS)”!</h1>
-        <img class="content__img_classroom" src="./img/classroom.jpg" alt="classroom">
+        <img class="content__img_classroom" src="./img/classroom.jpg" alt="классная_комната">
         <div class="content_info">
             <div class="content__section">
                 <div class="content__article">
@@ -69,10 +85,10 @@
         <form action="#" method="get">
             <p class="popup_heading">Войти на сайт</p>
             <p class="popup_login"><input class="popup__password_windows" type="text" required placeholder="Логин"></p>
-            <p class="popup__password"><input class="popup__password_windows" type="password" required
-                    placeholder="Пароль"></p>
+            <p class="popup__password"><input class="popup__password_windows" type="password" required placeholder="Пароль"></p>
+            <a class="popup_button" href="#">Войти</a>
         </form>
-        <a class="popup_button" href="#">Войти</a>
+        <div class="close"></div>
     </div>
     <script src="script.js"></script>
 </body>
