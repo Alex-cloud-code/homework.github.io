@@ -267,7 +267,7 @@
 }
 
 .student__second::after {
-    content: 'НОВИЧЕК';
+    content: 'НОВИЧОК';
     position: absolute;
     top: -12px;
     right: -13px;
