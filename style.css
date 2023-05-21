@@ -70,6 +70,7 @@
     padding: 28px 18px;
     display: block;
     text-align: center;
+    border: 1px solid transparent;
 }
 
 .menu__link_active {
